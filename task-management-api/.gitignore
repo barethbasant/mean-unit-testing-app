@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+vendor/
+
+# Environment variables
+.env
+
+# Mac OS
+.DS_Store
+
+# Editor files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+# npm
+npm-debug.log

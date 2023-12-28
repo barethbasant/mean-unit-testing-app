@@ -1,0 +1,78 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">{{ labelName }}</div>
+        <div class="card-body">
+          <form [formGroup]="loginForm" (submit)="onSubmit()">
+            <div class="form-group" *ngIf="!isLoginMode">
+              <label for="username">Full Name:</label>
+              <input
+                type="text"
+                formControlName="fullName"
+                class="form-control"
+              />
+              <span
+                *ngIf="
+                  loginForm.get('fullName')?.hasError('required') &&
+                  loginForm.get('fullName')?.touched
+                "
+                class="form-text text-muted help-text"
+                >Full Name is required</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="username">Email:</label>
+              <input
+                type="email"
+                formControlName="email"
+                class="form-control"
+              />
+              <span
+                *ngIf="
+                  loginForm.get('email')?.hasError('required') &&
+                  loginForm.get('email')?.touched
+                "
+                class="email-required form-text text-muted help-text"
+                >Email is required</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                formControlName="password"
+                class="form-control"
+              />
+              <span
+                *ngIf="
+                  loginForm.get('password')?.hasError('required') &&
+                  loginForm.get('password')?.touched
+                "
+                class="password-required form-text text-muted help-text"
+                >Password is required</span
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">
+              {{ labelName }}
+            </button>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <p class="mb-0" *ngIf="isLoginMode">
+            Don't have an account?
+            <a (click)="changeMode()" style="color: blue; cursor: pointer"
+              >Create an account</a
+            >
+          </p>
+          <p class="mb-0" *ngIf="!isLoginMode">
+            Already have an account?
+            <a (click)="changeMode()" style="color: blue; cursor: pointer"
+              >Back to Login</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

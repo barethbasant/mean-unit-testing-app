@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+
+# Build artifacts
+/dist/
+/tmp/
+
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled TypeScript
+*.js
+*.js.map
+
+# Compiled CSS
+*.css
+
+# Dependency directory
+/bower_components/
+
+# User-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Angular generated files
+*.metadata.json
+*.ngfactory.ts
+*.ngstyle.ts
+
+# System files
+/System Volume Information/
+$RECYCLE.BIN/
+
+# Environment variables
+.env
+
+# End of file
